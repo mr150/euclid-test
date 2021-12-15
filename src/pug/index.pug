@@ -1,0 +1,11 @@
+include tools/vars.pug
+include tools/mixins.pug
+
+doctype html
+html(lang="ru")
+	head
+		- pageTitle = 'Евклид проектные системы';
+		include includes/head.pug
+	body.page
+		include includes/header.pug
+		main.wrapper

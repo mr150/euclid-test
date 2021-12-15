@@ -1,0 +1,15 @@
+@charset 'utf-8';
+
+@use 'mlut/src/tools' as ml with (
+	$wrapper-max-width: 1770px,
+	$general-config: (
+		'generic-css': (
+			'svg-fill-cur-color': true,
+		),
+	),
+);
+
+@use 'includes/fonts';
+@use 'mlut/src/core/styles/generic';
+@use 'mlut/src/core/helpers/wrapper';
+@use 'mlut/src/core/helpers/btn';

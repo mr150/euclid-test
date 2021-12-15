@@ -1,0 +1,21 @@
+footer.wrapper.Pb15su.Mxw-lg0.D-g.Gap8su.md_Gtc-t12.Ai-c.Txa
+	section.Mb7su.md_Gc-s4.md_Mb0
+		.-D-mf.Ai-c.Jc-c.sm_Flw-n.Ml-5su
+			h2.Ml5su.Mb5su.sm_Mb0.W100p.Mt0.sm_W-a.Fns4su.Fw400.O70p Get the mobile app
+			a.Ml5su.O70p.O1_h.-Ts(href='https://itunes.apple.com/app/welltory-personal-nyj-analitik/id1074367771?mt=8' target='blank')
+				+svgIcon(31, 35, 'apple')
+				span.-D-vh Apple Store
+			a.Ml5su.O70p.O1_h.-Ts(href='https://play.google.com/store/apps/details?id=com.welltory.client.android' target='blank')
+				+svgIcon(29, 33, 'g-play')
+				span.-D-vh Google Play
+	section.md_Gc-s5.md_Txa-r
+		h2.-D-vh Resources
+		ul.D-if.Va.Jc-c.-All-sr.Ml5su_-btc.Pl5su_-btc(class='Bdl-;white*50p_-btc')
+			li: a.C-ih.O50p.O1_h.Txd.Txd-u_h.-Ts(href='https://welltory.com/privacy/') Terms of use
+			li: a.C-ih.O50p.O1_h.Txd.Txd-u_h.-Ts(href='https://welltory.com/terms/') Privacy policy
+	section.md_Gc-s3
+		h2.-D-vh Social
+		ul.D-f.Jc-c.Ai-c.Ml5su_-btc.-All-sr
+			each item, i in socLinks
+				li
+					a.C-ih.O50p.O1_h.-Ts(class=`Ct-i${item.icon}_b` href=item.link target='blank'): span.-D-vh= item.label
