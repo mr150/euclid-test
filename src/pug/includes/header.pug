@@ -1,14 +1,16 @@
 header.header
 	.wrapper.header__inner
+		nav
+			button.header__btn-nav.btn.btn--burger.btn--def-focus: span.sr-only Меню
+			ul.nav-list.nav-list--js
+				each item in nav
+					li.nav-list__item: a.nav-list__link(href='#')= item
 		picture.header__logo
 			source(srcset='img/logo.webp, img/logo@2x.webp 2x', type='image/webp')
 			img(src='img/logo.png' srcset='img/logo.png, img/logo@2x.png 2x' alt='Евклид')
-		nav.header__nav
-			button.header__btn-nav.btn.btn--burger: span.sr-only Навигация
-			ul.nav-list
-				each item in nav
-					li.nav-list__item: a.nav-list__link(href='#')= item
-			form.search-form(action='#')
-				.search-form__field
-					input(type='search' required)
-				button.btn.btn--search: span.sr-only Открыть поиск
+		form.search-form(action='#')
+			.search-form__field(hidden)
+				input(type='search' required)
+			button.btn.btn--search.btn--def-focus
+				+svgIcon(24, 24, 'search')
+				span.sr-only Открыть поиск
