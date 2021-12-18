@@ -43,60 +43,6 @@ body {
 	}
 }
 
-.nav-list {
-	margin: 0px;
-	padding: 15px;
-	list-style: none;
-	background: #fff;
-	border: 1px $color-black solid;
-
-	@include ml.bp('xl') {
-		display: flex;
-		border: 0;
-	}
-
-	@include ml.bp('<xl') {
-		&--js {
-			position: absolute;
-			left: 0px;
-			transform: translateX(-100%);
-		}
-	}
-}
-
-.nav-list__item {
-	@include ml.bp('xl') {
-		margin-right: 60px;
-	}
-
-	@include ml.bp('xxl') {
-		margin-right: 85px;
-	}
-
-	@include ml.bp('<xl') {
-		&:not(:last-child) {
-			margin-bottom: ml.px2rem(10px);
-		}
-	}
-}
-
-.nav-list__link {
-	color: $color-black;
-	font-size: ml.px2rem(18px);
-	font-weight: 600;
-	text-decoration: none;
-
-	&:hover {
-		text-decoration: 2px underline solid $color-orange0;
-		text-underline-offset: 7px;
-	}
-
-	&:active {
-		color: $color-orange1;
-		text-decoration-color: $color-orange1;
-	}
-}
-
 .gallery {
 	overflow: hidden auto;
 }
