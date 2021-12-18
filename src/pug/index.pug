@@ -10,9 +10,10 @@ html(lang="ru")
 		include includes/header.pug
 		main.wrapper
 			.section.main-section
-				h1.main-section__title Проектные решения любой сложности
-				p.main-section__text Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов
-				a.btn.btn--common.btn--accent(href='#') Заказать расчёт
+				.main-section__content
+					h1.main-section__title Проектные решения любой сложности
+					p.main-section__text Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов
+					a.btn.btn--common.btn--accent(href='#') Заказать расчёт
 				.main-section__slider.gallery
 					ul.gallery__list
 						- for(let i=0; i < 3; i++)
