@@ -1,0 +1,113 @@
+@use 'mlut/src/tools' as ml;
+@use 'includes/vars' as *;
+
+*:focus:not(:active) {
+	outline: 2px solid $color-orange0;
+}
+
+body {
+	font-family: 'Montserrat', ui-sans-serif, system-ui, -apple-system, Arial, sans-serif;
+}
+
+.wrapper {
+	display: block;
+	max-width: 1770px;
+	margin: 0 auto;
+	padding-right: 15px;
+	padding-left: 15px;
+
+	@include ml.bp('md') {
+		padding-right: 50px;
+		padding-left: 50px;
+	}
+
+	@include ml.bp('xl') {
+		padding-right: 75px;
+		padding-left: 75px;
+	}
+}
+
+.sr-only {
+	@include ml.apply('-D-vh');
+}
+
+.section {
+	margin-bottom: ml.px2rem(60px);
+
+	@include ml.bp('md') {
+		margin-bottom: ml.px2rem(80px);
+	}
+
+	@include ml.bp('xl') {
+		margin-bottom: ml.px2rem(100px);
+	}
+}
+
+.nav-list {
+	margin: 0px;
+	padding: 15px;
+	list-style: none;
+	background: #fff;
+	border: 1px $color-black solid;
+
+	@include ml.bp('xl') {
+		display: flex;
+		border: 0;
+	}
+
+	@include ml.bp('<xl') {
+		&--js {
+			position: absolute;
+			left: 0px;
+			transform: translateX(-100%);
+		}
+	}
+}
+
+.nav-list__item {
+	@include ml.bp('xl') {
+		margin-right: 60px;
+	}
+
+	@include ml.bp('xxl') {
+		margin-right: 85px;
+	}
+
+	@include ml.bp('<xl') {
+		&:not(:last-child) {
+			margin-bottom: ml.px2rem(10px);
+		}
+	}
+}
+
+.nav-list__link {
+	color: $color-black;
+	font-size: ml.px2rem(18px);
+	font-weight: 600;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: 2px underline solid $color-orange0;
+		text-underline-offset: 7px;
+	}
+
+	&:active {
+		color: $color-orange1;
+		text-decoration-color: $color-orange1;
+	}
+}
+
+.gallery {
+	overflow: hidden auto;
+}
+
+.gallery__list {
+	margin: 0px;
+	padding: 0px;
+}
+
+.gallery__item {
+	img {
+		max-width: 250%;
+	}
+}
