@@ -4,6 +4,7 @@
 	position: relative;
 	padding: ml.px2rem(60px) 21px ml.px2rem(60px) 22px;
 	color: #fff;
+	line-height: normal;
 	text-align: center;
 
 	@include ml.bp('md') {

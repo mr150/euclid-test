@@ -1,0 +1,79 @@
+@use 'mlut/src/tools' as ml;
+@use 'includes/vars' as *;
+
+.info-card {
+	position: relative;
+
+	@include ml.bp('sm') {
+		&:before {
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			bottom: 0px;
+			left: 0px;
+			background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.31) 100%);
+			content: '';
+		}
+	}
+}
+
+.info-card__img {
+	width: 100%;
+}
+
+.info-card__panel {
+	@include ml.bp('<sm') {
+		margin-bottom: ml.px2rem(8px);
+	}
+
+	@include ml.bp('sm') {
+		position: absolute;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 25px 30px;
+		color: #fff;
+		font-weight: 700;
+		background: rgba(0, 0, 0, 0.5);
+	}
+
+	@include ml.bp('md') {
+		padding: 34px 40px;
+	}
+
+	@include ml.bp('lg') {
+		padding: 50px;
+	}
+}
+
+.info-card__text {
+	margin: ml.px2rem(8px) 0;
+
+	@include ml.bp('sm') {
+		margin: 0px;
+		max-width: 454px;
+	}
+}
+
+.info-card__btn {
+	@include ml.bp('<sm') {
+		min-width: 162px;
+		color: $color-orange0;
+
+		&:hover {
+			color: #fff;
+		}
+	}
+
+	@include ml.bp('sm') {
+		margin-left: 47px;
+	}
+
+	@include ml.bp('md') {
+		padding: 17px 35px;
+		font-size: ml.px2rem(16px);
+	}
+}

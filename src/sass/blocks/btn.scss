@@ -3,6 +3,7 @@
 
 .btn {
 	padding: 0px;
+	line-height: normal;
 	@include ml.apply('-Ts-mClr');
 }
 
@@ -43,10 +44,24 @@
 	font-weight: 700;
 	font-size: 12px;
 	background: $color-orange0;
-	border: 3px solid transparent;
 
 	@include ml.bp('md') {
 		padding: 25px 37px;
 		font-size: 24px;
+	}
+
+	&:active {
+		background: $color-orange1;
+	}
+}
+
+.btn--invert {
+	background: transparent;
+	border: 3px solid $color-orange0;
+
+	&:hover,
+	&:focus {
+		background: $color-orange0;
+		border: 3px solid transparent;
 	}
 }

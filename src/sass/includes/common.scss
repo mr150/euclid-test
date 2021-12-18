@@ -6,6 +6,7 @@
 }
 
 body {
+	color: $color-black;
 	font-family: 'Montserrat', ui-sans-serif, system-ui, -apple-system, Arial, sans-serif;
 }
 
@@ -15,6 +16,11 @@ body {
 	margin: 0 auto;
 	padding-right: 15px;
 	padding-left: 15px;
+
+	@include ml.bp('sm') {
+		padding-right: 25px;
+		padding-left: 25px;
+	}
 
 	@include ml.bp('md') {
 		padding-right: 50px;
@@ -38,6 +44,7 @@ body {
 
 .section {
 	margin-bottom: ml.px2rem(60px);
+	line-height: 2;
 
 	@include ml.bp('md') {
 		margin-bottom: ml.px2rem(80px);
@@ -61,4 +68,30 @@ body {
 	img {
 		max-width: 250%;
 	}
+}
+
+.section-title {
+	margin-top: 0px;
+	margin-bottom: ml.px2rem(20px);
+	font-size: ml.px2rem(24px);
+	line-height: normal;
+	font-weight: 400;
+
+	@include ml.bp('md') {
+		font-size: ml.px2rem(48px);
+	}
+}
+
+.about-section__text {
+	margin-bottom: ml.px2rem(17px);
+	max-width: 1235px;
+
+	@include ml.bp('md') {
+		margin-bottom: ml.px2rem(65px);
+	}
+}
+
+.about-section__img {
+	max-width: 924px;
+	margin: 0px auto ml.px2rem(32px);
 }
