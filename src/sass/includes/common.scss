@@ -21,6 +21,11 @@ body {
 		padding-left: 50px;
 	}
 
+	// фикс группировки медиа запросов
+	@include ml.bp('lg') {
+		max-width: 1770px;
+	}
+
 	@include ml.bp('xl') {
 		padding-right: 75px;
 		padding-left: 75px;
