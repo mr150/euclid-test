@@ -97,7 +97,12 @@ const purgeCssConfig = {
 		dirs.src + files.html,
 		path.src.js + files.js,
 	],
-	defaultExtractor: content => content.match(/[a-zA-Z0-9\-_:;.@,*+!\[\]\/]+/g) || [],
+  whitelist: [
+    'swiper-pagination',
+    'swiper-initialized',
+    'swiper-pagination-bullet',
+    'btn--menu_open',
+	],
 };
 
 gulp.task('css-lint', function(){
@@ -296,4 +301,3 @@ gulp.task('build', gulp.series('clear', 'compile', 'html', 'imgmin', function(){
 	], {allowEmpty: true})
 		.pipe(gulp.dest(path.build.fonts));
 }));
-

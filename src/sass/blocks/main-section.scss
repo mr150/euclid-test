@@ -7,6 +7,10 @@
 	line-height: normal;
 	text-align: center;
 
+	@include ml.bp('sm') {
+		padding: ml.px2rem(60px) 40px ml.px2rem(60px);
+	}
+
 	@include ml.bp('md') {
 		padding: ml.px2rem(160px) 40px;
 		text-align: left;
@@ -17,7 +21,7 @@
 	}
 
 	@include ml.bp('xl') {
-		padding: ml.px2rem(100px) 80px;
+		padding: ml.px2rem(98px) 80px;
 	}
 }
 
@@ -26,6 +30,11 @@
 	margin-bottom: 6px;
 	font-size: ml.px2rem(20px);
 	font-weight: 800;
+
+	@include ml.bp('sm') {
+		margin-bottom: 10px;
+		font-size: ml.px2rem(32px);
+	}
 
 	@include ml.bp('md') {
 		margin-bottom: 16px;
@@ -47,6 +56,11 @@
 	margin-bottom: 32px;
 	font-size: 12px;
 	font-weight: 700;
+
+	@include ml.bp('sm') {
+		margin-bottom: 40px;
+		font-size: ml.px2rem(16px);
+	}
 
 	@include ml.bp('md') {
 		margin-bottom: 60px;

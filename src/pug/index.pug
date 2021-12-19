@@ -14,13 +14,14 @@ html(lang="ru")
 					h1.main-section__title Проектные решения любой сложности
 					p.main-section__text Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов
 					a.btn.btn--common.btn--accent(href='#') Заказать расчёт
-				.main-section__slider.gallery
-					ul.gallery__list
+				.main-section__slider.slider
+					ul.slider__list
 						- for(let i=0; i < 3; i++)
-							li.gallery__item
+							li
 								picture
 									source(srcset=`img/slide${i}-xs.jpg` media='(max-width: 992px)')
-									img(src=`img/slide${i}.jpg` alt)
+									img.slider__img(src=`img/slide${i}.jpg` alt)
+					.swiper-pagination
 			section.section.about-section
 				h2.section-title О нас
 				p.about-section__text Также как перспективное планирование создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса экспериментов, поражающих по своей масштабности и грандиозности. А также диаграммы связей могут быть описаны максимально подробно. Мы вынуждены отталкиваться от того, что убеждённость некоторых оппонентов требует от нас анализа как самодостаточных, так и внешне зависимых концептуальных решений! Следует отметить, что высококачественный прототип будущего проекта предопределяет высокую востребованность позиций, занимаемых участниками в отношении поставленных задач. Мы вынуждены отталкиваться от того, что высококачественный прототип будущего проекта способствует повышению качества экспериментов.
@@ -38,3 +39,4 @@ html(lang="ru")
 							li.feature(class=`feature--${i}`)
 								h4.feature__title= item.title
 								p.feature__text= item.descr
+		script(src='js/scripts.min.js' type='module')
