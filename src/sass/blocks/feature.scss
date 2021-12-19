@@ -1,0 +1,99 @@
+@use 'mlut/src/tools' as ml;
+@use 'includes/vars' as *;
+
+.feature {
+	&::before {
+		display: block;
+		width: 64px;
+		height: 49px;
+		margin-bottom: ml.px2rem(12px);
+		background-size: 100%;
+		content: '';
+	}
+
+	&--0::before {
+		background-image: url('../img/about-item0-xs.png');
+	}
+
+	&--1::before {
+		background-image: url('../img/about-item1-xs.png');
+	}
+
+	@include ml.bp('sm') {
+		text-align: center;
+
+		&::before {
+			width: 114px;
+			height: 99px;
+			margin: 0 auto ml.px2rem(20px);
+		}
+
+		&--0::before {
+			background-image: url('../img/about-item0.png');
+		}
+
+		&--1::before {
+			background-image: url('../img/about-item1.png');
+		}
+	}
+
+	@include ml.bp('md') {
+		position: relative;
+		padding: 35px 40px 35px 170px;
+		text-align: left;
+		border: 1px solid $color-gray0;
+
+		&::before {
+			position: absolute;
+			top: 0px;
+			bottom: 0px;
+			left: 40px;
+			margin: auto;
+		}
+	}
+
+	@include ml.bp('lg') {
+		padding: 63px 135px 63px 317px;
+
+		&::before {
+			left: 77px;
+			width: 190px;
+			height: 165px;
+		}
+	}
+
+	@include ml.bp('xl:xxl') {
+		padding: 35px 40px 35px 170px;
+
+		&::before {
+			left: 40px;
+			width: 114px;
+			height: 99px;
+		}
+	}
+
+	@include ml.bp('xxl') {
+		padding: 63px 100px 63px 300px;
+
+		&::before {
+			left: 70px;
+		}
+	}
+}
+
+.feature__title {
+	margin: 0 0 ml.px2rem(4px);
+	font-size: ml.px2rem(18px);
+	line-height: normal;
+	font-weight: 500;
+
+	@include ml.bp('md') {
+		margin-bottom: ml.px2rem(10px);
+		font-size: ml.px2rem(24px);
+		font-weight: 700;
+	}
+}
+
+.feature__text {
+	margin: 0px;
+}
