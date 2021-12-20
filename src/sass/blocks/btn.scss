@@ -50,8 +50,10 @@
 		font-size: 24px;
 	}
 
-	&:active {
-		background: $color-orange1;
+	&:hover,
+	&:focus {
+		outline: none;
+		background: rgba(255, 153, 0, 0.7);
 	}
 }
 
@@ -64,4 +66,8 @@
 		background: $color-orange0;
 		border: 3px solid transparent;
 	}
+}
+
+.btn--common:active {
+	background: $color-orange1;
 }

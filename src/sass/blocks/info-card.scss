@@ -22,10 +22,6 @@
 }
 
 .info-card__panel {
-	@include ml.bp('<sm') {
-		margin-bottom: ml.px2rem(8px);
-	}
-
 	@include ml.bp('sm') {
 		position: absolute;
 		right: 0px;
