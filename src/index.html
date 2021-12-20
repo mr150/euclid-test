@@ -5,13 +5,88 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Евклид проектные системы</title>
-		<link href="fonts/montserrat-regular.woff2" crossorigin rel="preload" as="font" type="font/woff2">
-		<link href="css/style.min.css" rel="stylesheet"><!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-<![endif]-->
+		<link href="fonts/montserrat-v18-latin_cyrillic-700.woff2" crossorigin rel="preload" as="font" type="font/woff2">
+		<link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
+		<link href="css/style.min.css" rel="stylesheet">
 	</head>
 	<body class="page">
-		<header class="wrapper"></header>
-		<main class="wrapper"></main>
+		<header class="header">
+			<div class="wrapper header__inner">
+				<nav>
+					<button class="header__btn-nav btn btn--burger"><span class="sr-only">Меню</span></button>
+					<ul class="nav-menu nav-menu--open">
+						<li class="nav-menu__item"><a class="nav-menu__link" href="#">О нас</a></li>
+						<li class="nav-menu__item"><a class="nav-menu__link" href="#">Проекты</a></li>
+						<li class="nav-menu__item"><a class="nav-menu__link" href="#">Этапы</a></li>
+						<li class="nav-menu__item"><a class="nav-menu__link" href="#">Отзывы</a></li>
+						<li class="nav-menu__item"><a class="nav-menu__link" href="#">Контакты</a></li>
+					</ul>
+				</nav><a class="header__logo">
+					<picture>
+						<source srcset="img/logo.webp, img/logo@2x.webp 2x" type="image/webp"><img src="img/logo.png" srcset="img/logo.png, img/logo@2x.png 2x" alt="Евклид">
+					</picture></a>
+				<form class="search-form" action="#">
+					<button class="btn btn--search">
+						<svg width="24" height="24">
+							<use xlink:href="img/sprite.svg#icon-search"></use>
+						</svg><span class="sr-only">Открыть поиск</span>
+					</button>
+				</form>
+			</div>
+		</header>
+		<main class="wrapper">
+			<div class="section main-section">
+				<div class="main-section__content">
+					<h1 class="main-section__title">Проектные решения любой сложности</h1>
+					<p class="main-section__text">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов</p><a class="btn btn--common btn--accent" href="#">Заказать расчёт</a>
+				</div>
+				<div class="main-section__slider slider">
+					<ul class="slider__list">
+						<li>
+							<picture>
+								<source srcset="img/slide0-xs.jpg" media="(max-width: 992px)"><img class="slider__img" src="img/slide0.jpg" alt>
+							</picture>
+						</li>
+						<li>
+							<picture>
+								<source srcset="img/slide1-xs.jpg" media="(max-width: 992px)"><img class="slider__img" src="img/slide1.jpg" alt>
+							</picture>
+						</li>
+						<li>
+							<picture>
+								<source srcset="img/slide2-xs.jpg" media="(max-width: 992px)"><img class="slider__img" src="img/slide2.jpg" alt>
+							</picture>
+						</li>
+					</ul>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+			<section class="section about-section">
+				<h2 class="section-title">О нас</h2>
+				<p class="about-section__text">Также как перспективное планирование создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса экспериментов, поражающих по своей масштабности и грандиозности. А также диаграммы связей могут быть описаны максимально подробно. Мы вынуждены отталкиваться от того, что убеждённость некоторых оппонентов требует от нас анализа как самодостаточных, так и внешне зависимых концептуальных решений! Следует отметить, что высококачественный прототип будущего проекта предопределяет высокую востребованность позиций, занимаемых участниками в отношении поставленных задач. Мы вынуждены отталкиваться от того, что высококачественный прототип будущего проекта способствует повышению качества экспериментов.</p>
+				<div class="section-grid">
+					<div class="info-card about-section__img">
+						<picture>
+							<source srcset="img/about.webp" type="image/webp"><img class="info-card__img" src="img/about.jpg" alt="Рабочий на стройке забивает гвоздь">
+						</picture>
+						<div class="info-card__panel">
+							<p class="info-card__text">Принимая во внимание показатели успешности, перспективное планирование способствует подготовке и реализации новых принципов.</p><a class="info-card__btn btn btn--common btn--invert" href="#">Подробнее</a>
+						</div>
+					</div>
+					<h3 class="sr-only">Наши преимущества</h3>
+					<ul class="features-list">
+						<li class="feature feature--0">
+							<h4 class="feature__title">Консультация с широким активом</h4>
+							<p class="feature__text">А также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для как самодостаточных, так и внешне зависимых концептуальных решений.</p>
+						</li>
+						<li class="feature feature--1">
+							<h4 class="feature__title">В своём стремлении повысить</h4>
+							<p class="feature__text">Качество жизни, они забывают, что сплочённость команды профессионалов представляет собой интересный эксперимент проверки прогресса профессионального сообщества.</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+		<script src="js/scripts.min.js" type="module"></script>
 	</body>
 </html>

@@ -14,10 +14,18 @@
 	}
 
 	@include ml.bp('<xl') {
+		top: 100%;
+		left: 0px;
+		z-index: 2;
+		transition: transform 0.3s;
+
 		&--js {
 			position: absolute;
-			left: 0px;
 			transform: translateX(-100%);
+		}
+
+		&--open {
+			transform: none;
 		}
 	}
 }

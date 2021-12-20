@@ -1,8 +1,8 @@
 header.header
 	.wrapper.header__inner
 		nav
-			button.header__btn-nav.btn.btn--burger.btn--def-focus: span.sr-only Меню
-			ul.nav-menu.nav-menu--js
+			button.header__btn-nav.btn.btn--burger: span.sr-only Меню
+			ul.nav-menu.nav-menu--open
 				each item in nav
 					li.nav-menu__item: a.nav-menu__link(href='#')= item
 		a.header__logo

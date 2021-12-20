@@ -13,6 +13,10 @@
 	width: 30px;
 	height: 23px;
 
+	&:focus {
+		outline-offset: 2px;
+	}
+
 	&::before {
 		position: absolute;
 		right: 0px;
@@ -28,7 +32,7 @@
 	&-open::before {
 		width: 18px;
 		color: $color-orange1;
-		box-shadow: 0px 10px 0px 0px;
+		box-shadow: 0 -10px 0 0, -7px -10px 0 0, 0px -20px 0 0, -13px -20px 0 0;
 	}
 }
 
